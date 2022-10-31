@@ -1,0 +1,44 @@
+@function rem($target) {
+    @return ($target/$baseFontSize) * 1rem;
+}
+
+@mixin title {
+    font-size: rem(24px);
+    font-weight: 500;
+    line-height: 1.333;
+    color: $blackColor;
+    margin-bottom: 20px;
+}
+
+@mixin lable {
+    font-size: rem(15px);
+    line-height: 1.467;
+    color: $darkGrayColor;
+    letter-spacing: rem(-0.2px);
+}
+
+@mixin text {
+    font-size: rem(13px);
+    line-height: 1.384;
+    color: $grayColor;
+    letter-spacing: rem(-0.1px);
+}
+
+@mixin button {
+    background-color: $blueColor;
+    color: $whiteColor;
+    font-size: rem(15px);
+    font-weight: 500;
+    line-height: 1.467;
+    letter-spacing: rem(-0.1px);
+}
+
+@mixin box {
+    height: 38px;
+    padding: 7px 10px;
+    border-radius: 6px;
+}
+
+@mixin input {
+    border: 1px solid $lightGrayColor;
+}

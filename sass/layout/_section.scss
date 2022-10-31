@@ -1,0 +1,102 @@
+.section {
+    &__form {
+        margin-bottom: 22px;
+    }
+    &__title {
+        @include title;
+    }
+    &__block {
+        &--dooble {
+            display: grid;
+            grid-template-columns: 1fr;
+            @media only screen and (min-width: 768px) {
+                // width: 100%;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+                justify-content: space-between;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    &__subblock {
+        width: 100%;
+        &:first-child {
+            margin-bottom: 20px;
+            @media only screen and (min-width: 768px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__lable {
+        @include lable;
+        display: block;
+        margin-bottom: 7px;
+        &--inline {
+            display: inline-block;
+            margin-bottom: 0;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+    &__input, &__select, &__submit {
+        display: block;
+        width: 100%;
+        @include box;
+    }
+
+    &__input, &__select {
+        @include input;
+        font-family: $interFont;
+        @include text;
+        color: $blackColor;
+        &:focus {
+            border: 1px solid $blueColor;
+        }
+        &:not(:focus) {
+            color: $grayColor;
+        }
+    }
+    // &__input {
+    //     &:valid:not(:empty){
+    //         border-color: green;
+    //     }
+    //     &:invalid:not(:empty){
+    //         border-color: red;
+    //     }
+    // }
+    &__subtext {
+        @include text;
+        margin-top: 7px;
+    }
+    &__submit {
+        background-color: $blueColor;
+        color: $whiteColor;
+        border: none;
+        &:focus {
+            border: 1px solid $darkGrayColor;
+        }
+    }
+    &__text {
+        @include text;
+        text-align: center;
+        margin: 0 auto ;
+        padding: 0 60px 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $lightGrayColor;
+        &-link {
+            color: $blueColor;
+        }
+    }
+    &__lable-text {
+        text-align: center;
+        &-link{
+            display: inline-block;
+            margin-left: 20px;
+            font-weight: 500;
+            color: $blueColor;
+        }
+    }
+}
